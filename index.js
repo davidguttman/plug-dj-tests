@@ -12,10 +12,32 @@ getTwitterLogin(function(err, location) {
   console.log('location', location);
   getTwitterTokens(location, function(err, tokens) {
     console.log('tokens', tokens);
-    
+    var creds = {
+        authenticity_token: tokens.authenticity_token
+      , oauth_token: tokens.oauth_token
+      , 'session[username_or_email]': 'xxx'
+      , 'session[password]': 'xxx'
+    }
+
+    twitterLogin(creds, function() {})
+
   })
   
 })
+
+function twitterLogin (creds) {
+  console.log('creds', creds);
+  var opts = {
+      url: 'https://api.twitter.com/oauth/authenticate'
+    , form: creds
+  }
+  request.post(opts, function(err, res, body) {
+    console.log('err', err);
+    console.log('body', body);
+    console.log('res.headers', res.headers);
+
+  })
+}
 
 function getTwitterTokens (url, cb) {
   request.get(url, function(err, res, body) {
