@@ -1,79 +1,24 @@
 var fs = require('fs')
-var replay = require('replay')
-var request = require('request').defaults({jar: true})
-var cheerio = require('cheerio')
+// var replay = require('replay')
+var request = require('request')
 
-// authenticity_token=9fc99adc8a8df366880eeb4d6d0a8a04a6d7e6ae&
-// oauth_token=kvokXWPQAoe7bY4cBitAmQ1zgOqdpc6kaiuea1fRILE&
-// session%5Busername_or_email%5D={{TWITTER ID}}&
-// session%5Bpassword%5D={{TWITTER PASSWORD}}
+var plugLogin = require('./plug-login')
 
-getTwitterLogin(function(err, location) {
-  console.log('location', location);
-  getTwitterTokens(location, function(err, tokens) {
-    console.log('tokens', tokens);
-    var creds = {
-        authenticity_token: tokens.authenticity_token
-      , oauth_token: tokens.oauth_token
-      , 'session[username_or_email]': 'xxx'
-      , 'session[password]': 'xxx'
-    }
+var creds = {
+    username: 'xxx'
+  , password: 'xxx'
+}
 
-    twitterLogin(creds, function(err, plugLoginUrl) {
-      request(plugLoginUrl, function(err, res, body) {
-        console.log('err', err);
-        console.log('body', body);
-        console.log('res.headers', res.headers);
-      })
-    })
-
-  })
-  
-})
-
-function twitterLogin (creds, cb) {
+plugLogin(creds, function(err, jar) {
+  console.log('jar', jar);
   var opts = {
-      url: 'https://api.twitter.com/oauth/authenticate'
-    , form: creds
+      url: 'http://plug.dj/the-chillout-mixer/'
+    , jar: jar
   }
-  request.post(opts, function(err, res, body) {
-    var $ = cheerio.load(body)
-    var metas = $('head meta')
-    for (var i = metas.length - 1; i >= 0; i--) {
-      var meta = metas[i]
-      if (meta.attribs['http-equiv'] == 'refresh') {
-        var plugLoginUrl = meta.attribs.content.split('url=')[1]
-        cb(err, plugLoginUrl)
-      }
-    };
-
+  var req = request(opts, function(err, res, body) {
+    console.log('res.headers', res.headers);
+    console.log('res.statusCode', res.statusCode);
+    // console.log('body', body);
   })
-}
-
-function getTwitterTokens (url, cb) {
-  request.get(url, function(err, res, body) {
-    var $ = cheerio.load(body)
-    
-    var authenticity = $('input[name="authenticity_token"]')[0].attribs.value
-    var oauth = $('input[name="oauth_token"]')[0].attribs.value
-
-    var tokens = {
-        authenticity_token: authenticity
-      , oauth_token: oauth
-    }
-    cb(err, tokens)
-  })
-}
-
-function getTwitterLogin (cb) {
-  var url = 'http://plug.dj/authenticate/oauth/?next=http%3A%2F%2Fplug.dj%2F'
-
-  opts = {
-      url: url
-    , form: { provider: 'twitter' }
-  }
-
-  request.post(opts, function (err, res, body) {
-    cb(err, res.headers.location)
-  })
-}
+  console.log('req.headers', req.headers);
+})
