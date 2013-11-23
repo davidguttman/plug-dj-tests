@@ -1,6 +1,6 @@
 var fs = require('fs')
 var replay = require('replay')
-var request = require('request')
+var request = require('request').defaults({jar: true})
 var cheerio = require('cheerio')
 
 // authenticity_token=9fc99adc8a8df366880eeb4d6d0a8a04a6d7e6ae&
@@ -20,7 +20,11 @@ getTwitterLogin(function(err, location) {
     }
 
     twitterLogin(creds, function(err, plugLoginUrl) {
-      console.log('plugLoginUrl', plugLoginUrl);
+      request(plugLoginUrl, function(err, res, body) {
+        console.log('err', err);
+        console.log('body', body);
+        console.log('res.headers', res.headers);
+      })
     })
 
   })
