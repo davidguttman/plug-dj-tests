@@ -19,22 +19,29 @@ getTwitterLogin(function(err, location) {
       , 'session[password]': 'xxx'
     }
 
-    twitterLogin(creds, function() {})
+    twitterLogin(creds, function(err, plugLoginUrl) {
+      console.log('plugLoginUrl', plugLoginUrl);
+    })
 
   })
   
 })
 
-function twitterLogin (creds) {
-  console.log('creds', creds);
+function twitterLogin (creds, cb) {
   var opts = {
       url: 'https://api.twitter.com/oauth/authenticate'
     , form: creds
   }
   request.post(opts, function(err, res, body) {
-    console.log('err', err);
-    console.log('body', body);
-    console.log('res.headers', res.headers);
+    var $ = cheerio.load(body)
+    var metas = $('head meta')
+    for (var i = metas.length - 1; i >= 0; i--) {
+      var meta = metas[i]
+      if (meta.attribs['http-equiv'] == 'refresh') {
+        var plugLoginUrl = meta.attribs.content.split('url=')[1]
+        cb(err, plugLoginUrl)
+      }
+    };
 
   })
 }
