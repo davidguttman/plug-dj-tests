@@ -1,0 +1,150 @@
+POST /authenticate/oauth/?next=http%3A%2F%2Fplug.dj%2F HTTP/1.1
+Host: plug.dj
+Connection: keep-alive
+Content-Length: 16
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Origin: http://plug.dj
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Referer: http://plug.dj/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: __cfduid=dce72266ac3aee152a28f24392ea0e02c1385166382743; l=en; __utma=132631759.349692379.1385166383.1385166383.1385166383.1; __utmb=132631759.2.9.1385166392035; __utmc=132631759; __utmz=132631759.1385166383.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+
+**BODY: provider=twitter
+
+HTTP/1.1 302 FOUND
+Server: cloudflare-nginx
+Date: Sat, 23 Nov 2013 00:26:32 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Location: https://api.twitter.com/oauth/authenticate?oauth_token=kvokXWPQAoe7bY4cBitAmQ1zgOqdpc6kaiuea1fRILE
+Set-Cookie: session="Vmt2CnEbfzSr7rvy2cZi50aQClU=?oauth_next=Vmh0dHA6Ly9wbHVnLmRqLwpwMQou&oauth_provider=VnR3aXR0ZXIKcDEKLg==&twitter_oauthtok=KFZrdm9rWFdQUUFvZTdiWTRjQml0QW1RMXpnT3FkcGM2a2FpdWVhMWZSSUxFClZkVUxYR0FoaTd3RTdkWG13RjFBQXJzQXdUQWFzRkhLZ1BzM2NPRlpRCnRwMQou"; Domain=.plug.dj; Path=/; HttpOnly
+CF-RAY: d19ba7e9bcc00ae
+
+///////////////////////////////////////////////////
+
+GET https://api.twitter.com/oauth/authenticate?oauth_token=kvokXWPQAoe7bY4cBitAmQ1zgOqdpc6kaiuea1fRILE HTTP/1.1
+:host: api.twitter.com
+accept-encoding: gzip,deflate,sdch
+accept-language: en-US,en;q=0.8
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+:path: /oauth/authenticate?oauth_token=kvokXWPQAoe7bY4cBitAmQ1zgOqdpc6kaiuea1fRILE
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+:version: HTTP/1.1
+cache-control: max-age=0
+referer: http://plug.dj/
+:scheme: https
+:method: GET
+
+HTTP/1.1 200 OK
+status: 200 OK
+version: HTTP/1.1
+cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+content-encoding: gzip
+content-length: 2644
+content-type: text/html; charset=utf-8
+date: Sat, 23 Nov 2013 00:26:32 GMT
+etag: "38b4ffae7a35ecf3d7ce43be887051ee"
+expires: Tue, 31 Mar 1981 05:00:00 GMT
+last-modified: Sat, 23 Nov 2013 00:26:32 GMT
+pragma: no-cache
+server: tfe
+set-cookie: external_referer=0Z2yCZ8K5BD75qLHCUxLmw%3D%3D%7C0; path=/; expires=Sun, 24-Nov-2013 00:26:32 GMT
+set-cookie: _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCH3NWYJCAToHaWQiJWZhYjU2YTY3NGQyMDMw%250AODAyN2U4ZmY0ODJmMzYwMTU2Ogxjc3JmX2lkIiU5N2YwYzExNTVhNjc4Zjky%250AY2QzOWI1YWMyYmRhNWYzMQ%253D%253D--c8ec545ca6bb53875f231ff0b2dc474a32d4ac5c; domain=.twitter.com; path=/; secure; HttpOnly
+set-cookie: guest_id=v1%3A138516639259811654; Domain=.twitter.com; Path=/; Expires=Mon, 23-Nov-2015 00:26:32 UTC
+status: 200 OK
+strict-transport-security: max-age=631138519
+vary: Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-mid: 169987ece83871347558cc7daf58c20a8fdf7f9c
+x-runtime: 0.04164
+x-transaction: d28861c6c0fc257f
+x-ua-compatible: IE=10,chrome=1
+x-xss-protection: 1; mode=block
+
+///////////////////////////////////////////////////
+
+POST https://api.twitter.com/oauth/authenticate HTTP/1.1
+:host: api.twitter.com
+origin: https://api.twitter.com
+accept-encoding: gzip,deflate,sdch
+accept-language: en-US,en;q=0.8
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+:path: /oauth/authenticate
+content-type: application/x-www-form-urlencoded
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+:version: HTTP/1.1
+cache-control: max-age=0
+cookie: external_referer=0Z2yCZ8K5BD75qLHCUxLmw%3D%3D%7C0; _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCH3NWYJCAToHaWQiJWZhYjU2YTY3NGQyMDMw%250AODAyN2U4ZmY0ODJmMzYwMTU2Ogxjc3JmX2lkIiU5N2YwYzExNTVhNjc4Zjky%250AY2QzOWI1YWMyYmRhNWYzMQ%253D%253D--c8ec545ca6bb53875f231ff0b2dc474a32d4ac5c; guest_id=v1%3A138516639259811654
+:scheme: https
+referer: https://api.twitter.com/oauth/authenticate?oauth_token=kvokXWPQAoe7bY4cBitAmQ1zgOqdpc6kaiuea1fRILE
+content-length: 191
+:method: POST
+
+**BODY: authenticity_token=9fc99adc8a8df366880eeb4d6d0a8a04a6d7e6ae&oauth_token=kvokXWPQAoe7bY4cBitAmQ1zgOqdpc6kaiuea1fRILE&session%5Busername_or_email%5D={{TWITTER ID}}&session%5Bpassword%5D={{TWITTER PASSWORD}}
+
+HTTP/1.1 200 OK
+status: 200 OK
+version: HTTP/1.1
+cache-control: no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+content-encoding: gzip
+content-length: 1745
+content-type: text/html; charset=utf-8
+date: Sat, 23 Nov 2013 00:26:44 GMT
+etag: "b7f5218c5cd70c44c5abcd94698d948f"
+expires: Tue, 31 Mar 1981 05:00:00 GMT
+last-modified: Sat, 23 Nov 2013 00:26:43 GMT
+pragma: no-cache
+server: tfe
+set-cookie: auth_token=8e9ff300cc3843eca6fc27c002ef0d9d1d31aa85; domain=.twitter.com; path=/; HttpOnly
+set-cookie: auth_token=8e9ff300cc3843eca6fc27c002ef0d9d1d31aa85; domain=.twitter.com; path=/; secure; HttpOnly
+set-cookie: secure_session=true; domain=.twitter.com; path=/
+set-cookie: twid=u%3D2209727635%7CYroJgjVVOj3C8cVPE8SkBVw6tOo%3D; domain=.twitter.com; path=/; secure
+set-cookie: twid=u%3D2209727635%7CYroJgjVVOj3C8cVPE8SkBVw6tOo%3D; domain=.twitter.com; path=/; secure
+set-cookie: twll=l%3D1385166403; domain=.twitter.com; path=/; expires=Thu, 23-Nov-2023 12:26:43 GMT
+set-cookie: dnt=1; domain=.twitter.com; path=/; expires=Thu, 23-Nov-2023 12:26:43 GMT
+set-cookie: pid=; domain=.twitter.com; path=/; expires=Thu, 01-Jan-1970 00:00:00 GMT
+set-cookie: remember_checked=0; domain=.twitter.com; path=/; expires=Thu, 23-Nov-2023 12:26:43 GMT
+set-cookie: remember_checked_on=0; domain=.twitter.com; path=/; expires=Thu, 23-Nov-2023 12:26:43 GMT
+set-cookie: lang=en; path=/
+set-cookie: twid=u%3D2209727635%7CYroJgjVVOj3C8cVPE8SkBVw6tOo%3D; domain=.twitter.com; path=/; secure
+set-cookie: _twitter_sess=BAh7CjoQc3RheV9zZWN1cmVUOgl1c2VybCsHk8S1gzoHaWQiJWZhYjU2YTY3%250ANGQyMDMwODAyN2U4ZmY0ODJmMzYwMTU2Og9jcmVhdGVkX2F0bCsIfc1ZgkIB%250AOgxjc3JmX2lkIiU5N2YwYzExNTVhNjc4ZjkyY2QzOWI1YWMyYmRhNWYzMQ%253D%253D--f715efbba637c9561eb1c7931f5d02ada59bf9ee; domain=.twitter.com; path=/; secure; HttpOnly
+status: 200 OK
+strict-transport-security: max-age=631138519
+vary: Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-mid: 4307c99c1300e317d8649ad9c69a043400f0a43b
+x-runtime: 0.17073
+x-transaction: 3293b9cddcdaf10c
+x-ua-compatible: IE=10,chrome=1
+x-xss-protection: 1; mode=block
+
+///////////////////////////////////////////////////
+
+GET /authenticate/oauth/?oauth_token=kvokXWPQAoe7bY4cBitAmQ1zgOqdpc6kaiuea1fRILE&oauth_verifier=XFKy7hceik0ADGQOPyqSwNUZHaKW8uViE9tLHGn9k4 HTTP/1.1
+Host: plug.dj
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: __cfduid=dce72266ac3aee152a28f24392ea0e02c1385166382743; l=en; __utma=132631759.349692379.1385166383.1385166383.1385166383.1; __utmb=132631759.2.9.1385166392035; __utmc=132631759; __utmz=132631759.1385166383.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); session="Vmt2CnEbfzSr7rvy2cZi50aQClU=?oauth_next=Vmh0dHA6Ly9wbHVnLmRqLwpwMQou&oauth_provider=VnR3aXR0ZXIKcDEKLg==&twitter_oauthtok=KFZrdm9rWFdQUUFvZTdiWTRjQml0QW1RMXpnT3FkcGM2a2FpdWVhMWZSSUxFClZkVUxYR0FoaTd3RTdkWG13RjFBQXJzQXdUQWFzRkhLZ1BzM2NPRlpRCnRwMQou"
+
+HTTP/1.1 302 FOUND
+Server: cloudflare-nginx
+Date: Sat, 23 Nov 2013 00:26:44 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Location: http://plug.dj/
+Set-Cookie: usr="68yh9dtmBybNR75gYnb7hPGUI+8=?_expires=STE0MDA3MTg0MDQKLg==&user_id=Uyc1MjhmZjU5Yjg3N2I5MjM5MDliNjUyZTMnCnAxCi4=&v=STIKLg=="; Domain=.plug.dj; expires=Thu, 22-May-2014 00:26:44 GMT; Path=/; HttpOnly
+Set-Cookie: session="eomozmQOv4/Z8yQosarLthACcA8=?username=Vk1yVmlzdWFscwpwMQou"; Domain=.plug.dj; Path=/; HttpOnly
+CF-RAY: d19bacb41ab00ae
+
+///////////////////////////////////////////////////
+
