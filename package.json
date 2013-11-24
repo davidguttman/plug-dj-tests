@@ -10,9 +10,17 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "request": "~2.27.0",
-    "cheerio": "~0.12.4"
+    "cheerio": "~0.12.4",
+    "node-uuid": "~1.4.1",
+    "events": "~0.5.0",
+    "jsdom": "~0.8.8",
+    "ws": "~0.4.31",
+    "uuid": "~1.4.1",
+    "accounting": "~0.3.2"
   },
   "devDependencies": {
-    "replay": "~1.9.0"
+    "replay": "~1.9.0",
+    "cookie-jar": "~0.3.0",
+    "plugapi": "~0.3.0"
   }
 }

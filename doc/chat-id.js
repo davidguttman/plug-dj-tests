@@ -1,0 +1,1 @@
+t.chatID = t.fromID.substr(0, 6) + this.Rndm.integer(0, 4294967295).toString(16)

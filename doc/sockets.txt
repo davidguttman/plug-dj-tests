@@ -1,0 +1,54 @@
+var Slug = "the-chillout-mixer";
+var VERSION = '0.9.811';
+var Sockurl = 'https://sjs.plug.dj/plug';
+socketioOpts = {
+    'host': 'sio2.plug.dj',
+    'port': '443',
+    'secure': true
+};
+
+///////////
+
+
+GET /plug/info HTTP/1.1
+Host: sjs.plug.dj
+Connection: keep-alive
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+Origin: http://plug.dj
+Accept: */*
+Referer: http://plug.dj/the-chillout-mixer/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+** Body: {"entropy": 1704573650, "websocket": true, "server_heartbeat_interval": 25.0, "origins": ["*:*"], "cookie_needed": false}
+
+///////////
+
+GET /socket.io/1/?t=1385186067973 HTTP/1.1
+Host: sio2.plug.dj
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+Origin: http://plug.dj
+Accept: */*
+Referer: http://plug.dj/the-chillout-mixer/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: __cfduid=d9c5f4c395151d9632a3269ca5e9a15d11385161148981; usr="+jW837YiSWP6s24cI/z3ZDfyd9g=?_expires=STE0MDA3MTMxNjIKLg==&user_id=Uyc1MGFlYWVkMTg3N2I5MjE3ZTJmYmFkNzgnCnAxCi4=&v=STIKLg=="; session="DJ98DqI+uV3RujoRbYnC169zYy0=?username=VkRNRwpwMQou"; __utma=132631759.479106883.1385161150.1385177656.1385184829.4; __utmb=132631759.5.9.1385185203465; __utmc=132631759; __utmz=132631759.1385161150.1.1.utmcsr=turntable.fm|utmccn=(referral)|utmcmd=referral|utmcct=/chillout_mixer_ambient_triphop
+
+** Body: 296f7f7498ad7483307006a5e4d4d5c2:17:25:websocket,flashsocket,xhr-polling,jsonp-polling,htmlfile
+
+///////////
+
+GET wss://sio2.plug.dj/socket.io/1/websocket/296f7f7498ad7483307006a5e4d4d5c2 HTTP/1.1
+Pragma: no-cache
+Origin: http://plug.dj
+Host: sio2.plug.dj
+Sec-WebSocket-Key: MfEca74r3M2X7zhFjsHrSg==
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+Upgrade: websocket
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+Cache-Control: no-cache
+Cookie: __utma=132631759.479106883.1385161150.1385177656.1385184829.4; __utmb=132631759.5.9.1385185203465; __utmc=132631759; __utmz=132631759.1385161150.1.1.utmcsr=turntable.fm|utmccn=(referral)|utmcmd=referral|utmcct=/chillout_mixer_ambient_triphop
+Connection: Upgrade
+Sec-WebSocket-Version: 13
