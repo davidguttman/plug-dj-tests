@@ -6,6 +6,7 @@ var creds = {
 }
 
 plugLogin(creds, function(err, jar) {
+  if (err) {console.error(err)}
   // console.log('jar', jar);
   var cookie = jar.cookies.filter(function(cookie) {
     if (cookie.name === 'usr') return true
