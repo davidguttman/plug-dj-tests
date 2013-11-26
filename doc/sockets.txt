@@ -25,6 +25,26 @@ Accept-Language: en-US,en;q=0.8
 
 ///////////
 
+
+GET wss://sjs.plug.dj/plug/858/qhfdf8h6/websocket HTTP/1.1
+Pragma: no-cache
+Origin: http://plug.dj
+Host: sjs.plug.dj
+Sec-WebSocket-Key: g2j4ZKUBzbzuSuwaiDxI7Q==
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+Upgrade: websocket
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+Cache-Control: no-cache
+Cookie: __utma=132631759.479106883.1385161150.1385177656.1385184829.4; __utmb=132631759.5.9.1385185203465; __utmc=132631759; __utmz=132631759.1385161150.1.1.utmcsr=turntable.fm|utmccn=(referral)|utmcmd=referral|utmcct=/chillout_mixer_ambient_triphop
+Connection: Upgrade
+Sec-WebSocket-Version: 13
+
+
+///////////
+
+
+https://sio2.plug.dj/socket.io/1/?t=
+
 GET /socket.io/1/?t=1385186067973 HTTP/1.1
 Host: sio2.plug.dj
 Connection: keep-alive
