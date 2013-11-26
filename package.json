@@ -16,7 +16,8 @@
     "jsdom": "~0.8.8",
     "ws": "~0.4.31",
     "uuid": "~1.4.1",
-    "accounting": "~0.3.2"
+    "accounting": "~0.3.2",
+    "plug-dj-login": "0.0.0"
   },
   "devDependencies": {
     "replay": "~1.9.0",
